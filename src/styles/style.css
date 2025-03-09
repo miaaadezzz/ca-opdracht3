@@ -1,0 +1,86 @@
+:root {
+  --swiper-navigation-color: #851961;
+  --swiper-pagination-color: #851961;
+}
+
+body {
+  background-color: #F1CDE5;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.title {
+  margin-right: 20px;
+}
+
+
+.swiper {
+  width: 1300px;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.slide-content {
+  padding-top: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: auto;
+  height: 600px;
+  object-fit: contain;
+}
+
+.title-overlay {
+  display: flex;
+  font-family: 'Inknut Antiqua', serif;
+  background-color: #F1CDE5;
+  color: #851961; /* Ensure the text is readable */
+  font-size: 60px; /* Make the title larger */
+  max-width: 300px; /* Ensure the title fits within the slide */
+  word-wrap: break-word; /* Wrap the text if necessary */
+  position: relative; /* Required for the pseudo-element positioning */
+  padding-left: 30px; /* Add padding to make space for the circle */
+}
+
+.title-overlay img {
+  height: 60px;
+  padding-right: 10px;}
+
+.swiper-button-prev, .swiper-button-next {
+  color: var(--swiper-navigation-color);
+}
+
+.temperature {
+  font-size: 20px;
+  font-weight: bold;
+  color: gray;
+  animation: blink 1.5s infinite;
+}
+
+/* Example styling for the temperature below the city name */
+.swiper-slide .temperature {
+  font-size: 1.5rem;
+  color: #851961;
+  text-align: center;
+  margin-top: 10px; /* Adds some space between the city name and temperature */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
