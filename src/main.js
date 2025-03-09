@@ -9,7 +9,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 // API Key for OpenWeatherMap
-const apiKey = '1396b8226842ac9d1fd8eb3ec8ff9319';  // Make sure to replace with your actual API key
+const apiKey = import.meta.env.VITE_OWM_API_KEY;
 const url = 'https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&units=metric&appid=${apiKey}';
 
 
