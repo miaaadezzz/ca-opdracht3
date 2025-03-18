@@ -10,8 +10,6 @@ import 'swiper/css/pagination';
 
 // API Key for OpenWeatherMap
 const apiKey = import.meta.env.VITE_OWM_API_KEY;
-const url = 'https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&units=metric&appid=${apiKey}';
-
 
 // List of cities and their countries
 const cities = [
@@ -51,7 +49,7 @@ async function getWeather(city) {
     const response = await fetch(url);
     const data = await response.json();
 
-    return data.main.temp; // 🌡️ Temperature in Celsius
+    return Math.round(data.main.temp);
   } catch (error) {
     console.error(`Error fetching weather data for ${city.name}:`, error);
     return 'N/A'; // Return 'N/A' if there's an error
