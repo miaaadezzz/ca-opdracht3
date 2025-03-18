@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #F1CDE5;
+  background-color: #f1cde5;
 }
 
 .container {
@@ -17,7 +17,6 @@ body {
 .title {
   margin-right: 20px;
 }
-
 
 .swiper {
   width: 1300px;
@@ -46,8 +45,8 @@ body {
 
 .title-overlay {
   display: flex;
-  font-family: 'Inknut Antiqua', serif;
-  background-color: #F1CDE5;
+  font-family: "Inknut Antiqua", serif;
+  background-color: #f1cde5;
   color: #851961; /* Ensure the text is readable */
   font-size: 60px; /* Make the title larger */
   max-width: 300px; /* Ensure the title fits within the slide */
@@ -58,9 +57,11 @@ body {
 
 .title-overlay img {
   height: 60px;
-  padding-right: 10px;}
+  padding-right: 10px;
+}
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   color: var(--swiper-navigation-color);
 }
 
