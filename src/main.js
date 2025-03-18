@@ -21,7 +21,7 @@ const cities = [
 ];
 
 // init Swiper:
-const swiper = new Swiper(".swiper", {
+new Swiper(".swiper", {
   // configure Swiper to use modules
   modules: [Navigation, Pagination],
 
@@ -47,7 +47,7 @@ async function getWeather(city) {
 
   try {
     const response = await fetch(url);
-    const data = await response.json();
+    const data = await response.json()
 
     return Math.round(data.main.temp);
   } catch (error) {
