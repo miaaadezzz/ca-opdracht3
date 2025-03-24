@@ -13,6 +13,6 @@ export default defineConfig({
   extends: ["js/recommended"],
   rules: {
     "no-unused-vars": "warn",
-    "no-console": "warn",
+    "no-console": "off", // Console statements zijn nu toegestaan
   },
 });
