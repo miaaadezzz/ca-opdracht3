@@ -1,10 +1,18 @@
-export default {
-  parserOptions: {
-    ecmaVersion: 2020, // Or a higher version depending on your project needs
-    sourceType: 'module', // Enables ES Modules (import/export) support
+import { defineConfig } from "eslint/config";
+import globals from "globals";
+import js from "@eslint/js";
+
+export default defineConfig({
+  files: ["**/*.{js,mjs,cjs}"],
+  languageOptions: {
+    globals: globals.browser,
   },
-  env: {
-    browser: true, // Or node: true if you're targeting Node.js
+  plugins: {
+    js,
   },
-  extends: ['eslint:recommended'], // You can add more extensions if needed
-};
+  extends: ["js/recommended"],
+  rules: {
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+  },
+});
