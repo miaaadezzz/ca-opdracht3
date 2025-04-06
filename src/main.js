@@ -7,6 +7,8 @@ import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { initEarth } from "./earth";
+
 
 // API Key for OpenWeatherMap
 const apiKey = import.meta.env.VITE_OWM_API_KEY;
@@ -42,7 +44,7 @@ new Swiper(".swiper", {
 });
 
 // Function to fetch weather data for each city
-async function getWeather(city) {
+export async function getWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.name},${city.country}&units=metric&appid=${apiKey}`;
 
   try {
@@ -64,5 +66,19 @@ cities.forEach((city, index) => {
   // Fetch the weather and update the temperature
   getWeather(city).then((temp) => {
     tempElement.textContent = `🌡️ ${temp}°C`; // Update temperature in the slider
+    tempElement.style.color = "#851961"; // Set text color to #851961
   });
 });
+
+// Voeg coördinaten toe voor de steden
+const citiesWithCoords = [
+  { name: "Tokyo", lat: 35.6895, lon: 139.6917 },
+  { name: "Cairo", lat: 30.0444, lon: 31.2357 },
+  { name: "Sydney", lat: -33.8688, lon: 151.2093 },
+  { name: "New York", lat: 40.7128, lon: -74.006 },
+  { name: "Rio de Janeiro", lat: -22.9068, lon: -43.1729 },
+];
+
+initEarth(".earth-container", citiesWithCoords);
+
+
