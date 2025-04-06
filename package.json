@@ -25,7 +25,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "swiper": "^11.2.5"
+    "swiper": "^11.2.5",
+    "three": "^0.175.0"
   },
   "lint-staged": {
     "**/*.js": "eslint --fix",
