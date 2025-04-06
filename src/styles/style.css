@@ -85,3 +85,16 @@ body {
     opacity: 0.5;
   }
 }
+
+.title canvas {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.earth-container {
+  width: 100%; /* Set the width to 100% of the parent container */
+  height: 100%; /* Adjust the height as needed */
+  display: flex;
+  justify-content: center; /* Center the canvas horizontally */
+  align-items: center; /* Center the canvas vertically */
+  overflow: visible; /* Ensure no content is clipped */
+}
